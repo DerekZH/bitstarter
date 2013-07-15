@@ -3,7 +3,9 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var index_html = fs.readFileSync('index.html','utf8');
+var file_name = "index2.html";
+
+var index_html = fs.readFileSync(file_name,'utf8');
 
 app.get('/', function(request, response) {
   response.send(index_html.toString());
